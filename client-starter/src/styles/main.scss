@@ -1,13 +1,26 @@
-// styles/_animations.scss or styles/main.scss
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+@use "./abstracts/functions";
 
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@use "./base/typography";
+
+@use "./layout/footer";
+@use "./layout/navbar";
+
+@use "./partials/variables";
+@use "./partials/mixins";
+@use "./partials/reset";
+@use "./partials/base";
+@use "./partials/components";
+
+// styles/_animations.scss or styles/main.scss
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scroll-to-top {

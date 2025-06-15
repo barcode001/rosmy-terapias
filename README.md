@@ -42,3 +42,8 @@ src/
 ```
 
 ## 📦 Deployed with Netlify
+ 
+ ```bash
+npm run build
+netlify deploy --prod
+```
