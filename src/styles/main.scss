@@ -1,0 +1,39 @@
+@use "./abstracts/functions";
+@use "./abstracts/mixins";
+@use "./abstracts/variables";
+
+@use "./layout/footer";
+@use "./layout/navbar";
+@use "./layout/components";
+@use "./layout/services";
+
+@use "./base/base";
+@use "./base/reset";
+@use "./base/typography";
+
+// styles/_animations.scss or styles/main.scss
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
