@@ -1,2 +1,17 @@
-# macOS
+# macOS system files
 .DS_Store
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Env files (if you add any API keys in future)
+.env
+
+# Vite cache (optional, but clean)
+.vite/
+
+# VSCode project files (optional)
+.vscode/
