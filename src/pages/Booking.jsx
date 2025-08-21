@@ -1,14 +1,12 @@
 import React from "react";
-import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
 
 export default function Booking() {
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "15min" });
-      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
-    })();
-  }, []);
+  // Exact Cal slug; added light background + brand color
+  const calSrc =
+    "https://cal.com/rosmy-terapias/15min" +
+    "?embed=1&layout=month_view&hide_gdpr_banner=1" +
+    "&background_color=ffffff&primary_color=7B3F9E";
+
   return (
     <section id="booking" className="booking wrapper">
       <h2>Agenda tu sesión</h2>
@@ -17,12 +15,14 @@ export default function Booking() {
         con Rosmy.
       </p>
 
-      <Cal
-        namespace="15min"
-        calLink="rosmy-terapias/15min"
-        style={{ width: "100%", height: "100%", overflow: "scroll" }}
-        config={{ layout: "month_view" }}
-      />
+      <div className="booking__embed">
+        <iframe
+          src={calSrc}
+          title="Reserva con Rosmy"
+          loading="lazy"
+          allow="clipboard-write *; fullscreen *; microphone *; camera *"
+        />
+      </div>
     </section>
   );
 }
