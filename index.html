@@ -2,9 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
-    <!-- Primary -->
+    <!-- ================= Primary SEO ================= -->
     <title>Rosmy Terapias – Sesiones de Sanación Energética en Houston</title>
     <meta
       name="description"
@@ -17,7 +20,7 @@
     <meta name="author" content="Rosmy Terapias" />
     <link rel="canonical" href="https://rosmyterapias.com/" />
 
-    <!-- Open Graph -->
+    <!-- ================= Open Graph (Facebook, WhatsApp, etc.) ================= -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rosmyterapias.com/" />
     <meta
@@ -28,12 +31,13 @@
       property="og:description"
       content="Recupera tu paz interior con sesiones de terapia energética personalizada en Houston. Reserva fácil en línea."
     />
-    <meta
-      property="og:image"
-      content="https://rosmyterapias.com/logo/image/preview.png"
-    />
+    <!-- preview.png must live in /public so it serves as https://rosmyterapias.com/preview.png -->
+    <meta property="og:image" content="https://rosmyterapias.com/preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-    <!-- Twitter Card (optional but nice) -->
+    <!-- ================= Twitter Card ================= -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -45,30 +49,31 @@
     />
     <meta
       name="twitter:image"
-      content="https://rosmyterapias.com/logo/image/preview.png"
+      content="https://rosmyterapias.com/preview.png"
     />
 
-    <!-- Brand / PWA niceties (optional) -->
+    <!-- ================= Brand / PWA niceties ================= -->
     <meta name="theme-color" content="#9c27b0" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Fonts -->
+    <!-- ================= Fonts ================= -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div id="root"></div>
 
-    <!-- LocalBusiness schema -->
+    <!-- ================= LocalBusiness Schema ================= -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Rosmy Terapias",
-        "image": "https://rosmyterapias.com/images/logo.png",
+        "image": "https://rosmyterapias.com/preview.png",
         "@id": "https://rosmyterapias.com",
         "url": "https://rosmyterapias.com",
         "telephone": "+1-832-322-5236",
@@ -89,7 +94,7 @@
       }
     </script>
 
-    <!-- Your app bundle -->
+    <!-- ================= App bundle ================= -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
