@@ -41,7 +41,7 @@ export default function Testimonials() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            @rosmy
+            @rosmyterapias1
           </a>
         </p>
       </div>
