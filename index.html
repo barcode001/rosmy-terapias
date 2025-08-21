@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rosmy Terapias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary -->
     <title>Rosmy Terapias – Sesiones de Sanación Energética en Houston</title>
     <meta
       name="description"
@@ -14,7 +15,11 @@
       content="sanación energética Houston, terapia energética Houston, terapia alternativa, bienestar espiritual, Rosmy Terapias"
     />
     <meta name="author" content="Rosmy Terapias" />
+    <link rel="canonical" href="https://rosmyterapias.com/" />
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rosmyterapias.com/" />
     <meta
       property="og:title"
       content="Rosmy Terapias – Sanación Energética en Houston"
@@ -23,20 +28,32 @@
       property="og:description"
       content="Recupera tu paz interior con sesiones de terapia energética personalizada en Houston. Reserva fácil en línea."
     />
-    <meta property="og:url" content="https://rosmyterapias.com" />
-    <meta property="og:type" content="website" />
     <meta
       property="og:image"
       content="https://rosmyterapias.com/images/preview.jpg"
     />
-    <!-- Google tag (gtag.js) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script> -->
+
+    <!-- Twitter Card (optional but nice) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Rosmy Terapias – Sanación Energética en Houston"
+    />
+    <meta
+      name="twitter:description"
+      content="Recupera tu paz interior con sesiones de terapia energética personalizada en Houston. Reserva fácil en línea."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rosmyterapias.com/images/preview.jpg"
+    />
+
+    <!-- Brand / PWA niceties (optional) -->
+    <meta name="theme-color" content="#9c27b0" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -44,6 +61,8 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- LocalBusiness schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -52,7 +71,7 @@
         "image": "https://rosmyterapias.com/images/logo.png",
         "@id": "https://rosmyterapias.com",
         "url": "https://rosmyterapias.com",
-        "telephone": "(832) 322-5236",
+        "telephone": "+1-832-322-5236",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Houston",
@@ -69,11 +88,8 @@
         "description": "Sesiones de terapia energética personalizadas en Houston, TX 77013 para armonizar cuerpo, mente y espíritu."
       }
     </script>
-    <script
-      type="text/javascript"
-      src="https://app.cal.com/embed/embed.js"
-      async
-    ></script>
+
+    <!-- Your app bundle -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
