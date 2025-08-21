@@ -11,7 +11,7 @@ function Booking() {
 
       <div className="booking__embed">
         <iframe
-          src="https://cal.com/rosmy/energia" // 👈 replace with her Cal.com link
+          src="https://cal.com/rosmy-terapias/15min" // 👈 replace with her Cal.com link
           width="100%"
           height="600"
           frameBorder="0"

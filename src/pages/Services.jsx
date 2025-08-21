@@ -1,5 +1,5 @@
 import React from "react";
-import energyIcon from "../assets/icons/icon-energy3.png";
+import energyIcon from "../assets/icons/icon-energy2.png";
 
 const items = [
   {
