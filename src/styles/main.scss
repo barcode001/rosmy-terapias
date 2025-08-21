@@ -201,3 +201,6 @@ body::after {
 #contact {
   scroll-margin-top: 80px; // same as navbar height
 }
+html {
+  scroll-behavior: smooth;
+}

@@ -30,9 +30,10 @@
     padding: 1rem;
 
     h1 {
-      font-size: 3rem;
+      font-size: clamp(2.1rem, 2vw, 3rem);
       margin-bottom: 1rem;
       font-weight: 600;
+      text-wrap: pretty;
     }
 
     p {

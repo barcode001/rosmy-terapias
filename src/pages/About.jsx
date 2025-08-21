@@ -26,7 +26,7 @@ function About() {
           <li>🌿 Reconexión con la energía vital</li>
           <li>🕊️ Espacio seguro para sanar</li>
         </ul>
-        <a href="#contact" className="btn-primary">
+        <a href="#booking" className="btn-primary">
           Agenda tu sesión
         </a>
       </div>
