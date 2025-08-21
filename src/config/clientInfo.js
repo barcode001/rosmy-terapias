@@ -1,15 +1,15 @@
 const clientInfo = {
-  businessName: "Business Name Here",
+  businessName: "Rosmy Terapias",
   tagline: "Your business tagline goes here",
   ownerName: "Owner Name",
   location: {
-    city: "City",
-    state: "State"
+    city: "Houston",
+    state: "Texas"
   },
   contact: {
     phone: "(000) 000-0000",
-    email: "info@businessdomain.com",
-    address: "1234 Business Address, Suite 100"
+    email: "rosmyterapias@gmail.com",
+    address: "Houston, TX 77013"
   },
   social: {
     instagram: "https://instagram.com/yourbusiness",

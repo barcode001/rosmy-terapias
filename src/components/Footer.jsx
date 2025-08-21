@@ -26,7 +26,10 @@ export default function Footer() {
           </HashLink>
           <Link to="/privacy">Privacidad & Aviso Legal</Link>
         </nav>
-
+        <p>
+          📍 Rosmy Terapias – Sesiones de sanación energética en Houston, TX
+          77013
+        </p>
         <p className="footer__dev">
           Sitio creado por{" "}
           <a
