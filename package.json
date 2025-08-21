@@ -1,26 +1,27 @@
 {
   "name": "rosmy-terapias",
   "version": "1.0.0",
-  "description": "This is my personal starter template for fast website builds. It includes:",
+  "private": true,
+  "description": "Sitio web de Rosmy Terapias (Vite + React + SCSS).",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "dev:network": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/barcode001/starter-kit-.git"
+    "url": "https://github.com/barcode001/rosmy-terapias.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/barcode001/starter-kit-/issues"
+    "url": "https://github.com/barcode001/rosmy-terapias/issues"
   },
-  "homepage": "https://github.com/barcode001/starter-kit-#readme",
+  "homepage": "https://rosmyterapias.com",
+  "author": "Samuel Flores",
+  "license": "ISC",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -31,5 +32,8 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.5.2",
     "vite": "^6.3.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
