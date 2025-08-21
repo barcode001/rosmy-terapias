@@ -201,3 +201,36 @@ body::after {
 #contact {
   scroll-margin-top: 80px; // same as navbar height
 }
+
+/* booking.scss */
+#booking,
+.booking-embed,
+.cal-embed,
+.cal-container {
+  position: relative;
+  isolation: isolate; /* creates a new layer */
+  z-index: 1;
+}
+
+.booking-embed iframe {
+  width: 100%;
+  min-height: 950px; /* give it room on phones */
+  border: 0;
+  display: block;
+}
+@media (max-width: 480px) {
+  .booking-embed iframe {
+    min-height: 1050px;
+  }
+}
+/* if you have a global animated background or decorative layers */
+.bg-overlay,
+.hero__wave,
+.some-decor {
+  pointer-events: none; /* VERY important */
+}
+/* disable scroll-reveal on booking specifically */
+// #booking.reveal {
+//   transform: none !important;
+//   opacity: 1 !important;
+// }

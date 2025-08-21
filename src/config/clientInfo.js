@@ -7,14 +7,14 @@ const clientInfo = {
     state: "Texas"
   },
   contact: {
-    phone: "(000) 000-0000",
+    phone: "(832) 322-5236",
     email: "rosmyterapias@gmail.com",
     address: "Houston, TX 77013"
   },
   social: {
     instagram: "https://instagram.com/yourbusiness",
     facebook: "https://facebook.com/yourbusiness",
-    tiktok: "https://tiktok.com/@yourbusiness"
+    tiktok: "https://tiktok.com/@rosmyterapias1"
   },
   googleAnalyticsID: "G-XXXXXXXXXX"
 };
