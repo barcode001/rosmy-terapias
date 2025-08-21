@@ -1,0 +1,41 @@
+.thank-you {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__card {
+    background: #faf7fb;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+    h1 {
+      font-size: 2.2rem;
+      color: #6b2c91;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #4b3a57;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background: linear-gradient(135deg, #b98be6, #7a44c4);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(135deg, #7a44c4, #b98be6);
+      }
+    }
+  }
+}

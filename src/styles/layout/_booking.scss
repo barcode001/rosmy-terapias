@@ -1,0 +1,117 @@
+// Theme vars (tweak as needed)
+$max-w: 1100px;
+$text: #2f1d3a;
+$muted: #6b5a75;
+$accent: #9c27b0;
+$accent-dark: #7b1fa2;
+$bg-soft: #faf7fb;
+
+// Cal.com embed theming (works inside the iframe)
+:root {
+  --cal-brand: #9c27b0;
+  --cal-brand-emphasis: #7b1fa2;
+  --cal-text: #2f1d3a;
+  --cal-text-emphasis: #2f1d3a;
+  --cal-border: #eee;
+  --cal-background: #ffffff;
+}
+
+// .wrapper {
+//   max-width: $max-w;
+//   margin: 0 auto;
+//   padding: 0 1rem;
+// }
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: $accent;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(156, 39, 176, 0.25);
+  border: 1px solid transparent;
+
+  &:hover {
+    background: $accent-dark;
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 16px rgba(156, 39, 176, 0.25);
+  }
+}
+
+// Booking section
+.booking {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: #fff;
+  text-align: center;
+
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    margin: 0 0 0.5rem;
+    color: $text;
+  }
+
+  p {
+    margin: 0 auto 1.5rem;
+    max-width: 60ch;
+    color: $muted;
+    font-size: 1.05rem;
+  }
+
+  // Button row for popup mode (optional)
+  &__actions {
+    margin: 1rem 0 2rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  // Responsive embed container
+  &__embed {
+    // keeps iframe responsive with rounded corners
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: $bg-soft;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    // Aspect ratio on small screens
+    aspect-ratio: 3 / 4;
+
+    // Taller on larger screens
+    @media (min-width: 900px) {
+      aspect-ratio: 16 / 9;
+      min-height: 600px; // ensures enough space for full scheduler
+    }
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #fff; // avoids gray flash while loading
+    }
+  }
+}
+
+// Optional subtle separator above footer/next section
+.section-sep {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.08),
+    transparent
+  );
+  margin: 2rem 0 0;
+}

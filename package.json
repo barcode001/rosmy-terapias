@@ -1,10 +1,11 @@
 {
-  "name": "boilerplate",
+  "name": "rosmy-terapias",
   "version": "1.0.0",
   "description": "This is my personal starter template for fast website builds. It includes:",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "dev:network": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +25,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
+    "react-router-hash-link": "^2.4.3",
     "sass": "^1.89.2"
   },
   "devDependencies": {

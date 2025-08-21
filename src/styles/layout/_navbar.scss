@@ -1,26 +1,103 @@
+@use "/src/styles/abstracts/functions" as *;
+@use "/src/styles/abstracts//mixins" as *;
+@use "/src/styles/abstracts/variables" as *;
+
 .navbar {
-  background: #000;
-  color: #fff;
-  padding: 1rem 2rem;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; // let it stretch full width
+  height: 60px;
+  z-index: 100;
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  background-color: hsl(291deg 47% 51%);
+  // background-color: hsl(276deg 58% 31%);
+  .navbar-container {
+    max-width: 1440px; // instead of giving .navbar a fixed width
+    margin: 0 auto; // centers the container
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem; // some breathing room
 
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
 
-  a {
-    color: white;
-    text-decoration: none;
+  .logo {
+    img {
+      max-height: 60px;
+      object-fit: cover;
+      margin: 0;
+      padding: 0;
+      margin-left: rem(10);
+      // padding-top: rem(10);
+    }
+  }
 
-    &:hover {
-      text-decoration: underline;
+  .menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding-bottom: rem(10);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-right: rem(10);
+
+    li a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: whitesmoke;
+      &:hover {
+        color: hsl(291, 91%, 66%);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+      transition: transform 0.2s ease;
+      margin-right: rem(10);
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1rem 2rem;
+    }
+
+    .nav-links.open {
+      display: flex;
+      font-size: 1.5rem;
+      // background: none;
+      border: none;
+      cursor: pointer;
+      background: hsl(291deg 47% 51%);
+      height: 100vh;
+      margin: 0;
     }
   }
 }

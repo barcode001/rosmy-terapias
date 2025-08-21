@@ -1,11 +1,19 @@
 import React from "react";
-import clientInfo from "../config/clientInfo";
+// import clientInfo from "../config/clientInfo";
+import Hero from "../components/Hero";
+import About from "./About";
+import Services from "./Services";
+import Testimonials from "./Testmonials";
+import Booking from "./Booking";
 
 function Home() {
   return (
     <div>
-      <h1>Welcome to {clientInfo.businessName}</h1>
-      <p>{clientInfo.tagline}</p>
+      <Hero />
+      <About />
+      <Services />
+      <Testimonials />
+      <Booking />
     </div>
   );
 }

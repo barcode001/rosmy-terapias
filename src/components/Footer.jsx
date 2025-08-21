@@ -1,19 +1,42 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import React from "react";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <p className="credits">
-          © {new Date().getFullYear()} ClientName. All rights reserved.
+      <div className="footer__container wrapper">
+        <p className="footer__credits">
+          © {new Date().getFullYear()} Rosmy Terapias. Todos los derechos
+          reservados.
         </p>
-        <div className="footer-links">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
+
+        <nav className="footer__links">
+          <HashLink smooth to="/#hero">
+            Inicio
+          </HashLink>
+          <HashLink smooth to="/#services">
+            Servicios
+          </HashLink>
+          <HashLink smooth to="/#about">
+            Sobre mí
+          </HashLink>
+          <HashLink smooth to="/#contact">
+            Contacto
+          </HashLink>
+          <Link to="/privacy">Privacidad & Aviso Legal</Link>
+        </nav>
+
+        <p className="footer__dev">
+          Sitio creado por{" "}
+          <a
+            href="https://theedenscode.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            EdensCode
+          </a>
+        </p>
       </div>
     </footer>
   );

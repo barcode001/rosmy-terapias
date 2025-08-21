@@ -1,26 +1,60 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import logo from "../assets/logo/logo.png";
+import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="logo">
-          {/* You can replace this with an image or SVG if you have a brand logo */}
-          <h1>ClientName</h1>
+    <nav className="navbar backdrop">
+      <div className="navbar-container wrapper">
+        <Link
+          to="/"
+          className="logo"
+          onClick={() => {
+            if (window.location.pathname === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+        >
+          <img loading="eager" src={logo} alt="Logo" />
         </Link>
-        <ul className="nav-links">
+
+        {/* Hamburger icon */}
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          {menuOpen ? "✖️" : "☰"}
+        </button>
+
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                setMenuOpen(false);
+              }}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <HashLink smooth to="/#about" onClick={() => setMenuOpen(false)}>
+              About
+            </HashLink>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <HashLink smooth to="/#services" onClick={() => setMenuOpen(false)}>
+              Services
+            </HashLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,4 +1,104 @@
-.service-card {
-  background: red;
-  margin-top: 100px;
+$max-w: 1100px;
+$text: #2f1d3a;
+$muted: #6b5a75;
+$accent: #9c27b0;
+$accent-soft: rgba(156, 39, 176, 0.12);
+$bg: #ffffff;
+$bg-soft: #faf7fb;
+
+.wrapper {
+  max-width: $max-w;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.services {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: $bg;
+
+  &__header {
+    text-align: center;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    margin-top: 20px;
+
+    h2 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      margin: 0 0 0.5rem;
+      color: $text;
+      padding-top: 20px;
+    }
+
+    .services__sub {
+      color: $muted;
+      margin: 0 auto;
+      max-width: 60ch;
+      font-size: 1.05rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: 680px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1rem, 2.5vw, 1.5rem);
+    }
+  }
+}
+
+.service {
+  background: $bg-soft;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 20px;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: $accent-soft;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 0.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: $accent-soft;
+
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: $accent;
+    }
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $text;
+    margin: 0.25rem 0 0.35rem;
+  }
+
+  &__desc {
+    color: $muted;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .service__img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+  }
 }

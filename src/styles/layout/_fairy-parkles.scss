@@ -1,0 +1,94 @@
+body {
+  cursor: url("/src/assets/icons/fairy.png") 12 12, auto;
+}
+
+.fairy-sparkle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* Start at the provided coordinates */
+  transform: translate3d(var(--x, -10000px), var(--y, -10000px), 0) scale(1);
+  border-radius: 999px;
+  pointer-events: none;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  background: radial-gradient(
+    circle,
+    // #ffd700 0%,
+    // #ffb6ff 60%,
+    // rgba(255, 255, 255, 0) 100%
+    #be6ed4 0%,
+    #ba0ad9 60%,
+    rgba(101, 38, 138, 0) 100%
+  );
+  opacity: 0;
+}
+
+.fairy-sparkle.play {
+  animation: fairy-pop 0.9s ease-out forwards;
+}
+
+@keyframes fairy-pop {
+  0% {
+    opacity: 0.95;
+    transform: translate3d(var(--x), var(--y), 0) scale(0.8)
+      rotate(var(--twinkle-rot, 0));
+  }
+  60% {
+    opacity: 0.75;
+    transform: translate3d(var(--x), var(--y), 0)
+      scale(var(--twinkle-scale, 1.4)) rotate(var(--twinkle-rot, 0));
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--x), calc(var(--y) - 14px), 0) scale(0.6)
+      rotate(var(--twinkle-rot, 0));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fairy-layer {
+    display: none;
+  }
+}
+
+/* FairyCursor.scss */
+@media (hover: none), (pointer: coarse) {
+  .fairy-layer {
+    display: none !important;
+  }
+}
+
+.fairy-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Enable with smooth fade when a precise pointer is available (mouse/trackpad) */
+@media (hover: hover) and (pointer: fine) {
+  .fairy-layer {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Hide on touch / coarse pointers (phones, most tablets using touch) */
+@media (hover: none), (pointer: coarse) {
+  .fairy-layer {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Reduced motion users: just keep it hidden */
+@media (prefers-reduced-motion: reduce) {
+  .fairy-layer {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
