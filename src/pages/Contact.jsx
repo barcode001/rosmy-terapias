@@ -1,56 +1,98 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import { useNavigate } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
 
-function Contact() {
+export default function Contact() {
+  const formRef = useRef(null);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (sending) return;
+
+    setSending(true);
+    setError("");
+
+    emailjs
+      .sendForm(
+        "service_x2b8ex9",
+        "template_kri3ouh",
+        formRef.current,
+        "Zmrny_Qj3qwgY6rPU"
+      )
+
+      .then(() => {
+        // optionally clear the form
+        formRef.current?.reset();
+        // redirect to Thank You page
+        navigate("/thank-you");
+      })
+      .catch((err) => {
+        console.error(err);
+        setError("Ocurrió un error. Intenta de nuevo.");
+      })
+      .finally(() => setSending(false));
+  };
+
   return (
     <section className="contact wrapper">
-      <h1>Contact Us</h1>
+      <h1>Contáctanos</h1>
       <p className="contact__intro">
-        Got questions or want to book a session? Reach out below or send us a
-        message directly.
+        ¿Tienes preguntas o quieres reservar una sesión? Envíanos un mensaje.
       </p>
 
       <div className="contact__grid">
-        {/* Contact Details */}
+        {/* Contact Info */}
         <div className="contact__info">
-          <h3>📞 Phone</h3>
+          <h3>📞 Teléfono</h3>
           <p>{clientInfo.contact.phone}</p>
 
-          <h3>✉️ Email</h3>
+          <h3>✉️ Correo</h3>
           <p>{clientInfo.contact.email}</p>
 
-          <h3>📍 Address</h3>
+          <h3>📍 Dirección</h3>
           <p>{clientInfo.contact.address}</p>
         </div>
 
         {/* Contact Form */}
-        <form
-          className="contact__form"
-          action="/thank-you" // redirect after submit
-          method="POST"
-        >
+        <form ref={formRef} className="contact__form" onSubmit={handleSubmit}>
+          {/* Helpful hidden fields for the email template */}
+          <input type="hidden" name="to_name" value="Rosmy" />
+          <input
+            type="hidden"
+            name="subject"
+            value="Nuevo mensaje desde rosmyterapias.com"
+          />
+
           <label>
-            Name
+            Nombre
             <input type="text" name="name" required />
           </label>
 
           <label>
-            Email
+            Correo electrónico
             <input type="email" name="email" required />
           </label>
 
           <label>
-            Message
+            Mensaje
             <textarea name="message" rows="5" required></textarea>
           </label>
 
-          <button type="submit" className="btn-primary">
-            Send Message
+          <button type="submit" className="btn-primary" disabled={sending}>
+            {sending ? "Enviando..." : "Enviar mensaje"}
           </button>
+
+          {error && (
+            <p className="error" role="alert">
+              {error}
+            </p>
+          )}
         </form>
       </div>
     </section>
   );
 }
-
-export default Contact;
