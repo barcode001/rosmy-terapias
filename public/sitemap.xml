@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://rosmyterapias.com/</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://rosmyterapias.com/#about</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://rosmyterapias.com/#services</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://rosmyterapias.com/#testimonials</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Booking Section -->
+  <url>
+    <loc>https://rosmyterapias.com/#booking</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://rosmyterapias.com/#contact</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://rosmyterapias.com/privacy</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
