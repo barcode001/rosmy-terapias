@@ -1,6 +1,6 @@
 import React from "react";
 import clientInfo from "../config/clientInfo";
-import profilePic from "../assets/logo/images/profilepic.jpeg";
+import profilePic from "../assets/logo/images/profilepic.webp";
 
 function About() {
   return (
