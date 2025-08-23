@@ -12,6 +12,7 @@ export default function Navbar() {
         <Link
           to="/"
           className="logo"
+          loading="lazy"
           onClick={() => {
             if (window.location.pathname === "/") {
               window.scrollTo({ top: 0, behavior: "smooth" });
