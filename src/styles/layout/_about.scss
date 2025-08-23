@@ -38,6 +38,7 @@ $bp-md: 768px;
 // --- ABOUT SECTION ---
 .about {
   padding: clamp(3rem, 6vw, 5rem) 0;
+
   background: $bg-soft;
 
   display: grid;
@@ -54,6 +55,9 @@ $bp-md: 768px;
   &__image {
     display: grid;
     place-items: center;
+    @media (max-width: 900px) {
+      padding-top: 2rem;
+    }
 
     img {
       width: min(320px, 90%);
@@ -69,6 +73,7 @@ $bp-md: 768px;
 
   &__content {
     color: $text;
+    padding: 1.5rem;
 
     h2 {
       font-size: clamp(1.75rem, 3.5vw, 2.25rem);
