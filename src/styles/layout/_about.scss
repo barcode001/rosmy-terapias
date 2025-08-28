@@ -99,8 +99,6 @@ $bp-md: 768px;
       font-size: clamp(1.05rem, 3.5vw, 0.5rem);
       line-height: 1.7;
       margin: 0 0 1rem;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
       strong {
         color: $text;
         font-weight: 700;
@@ -115,8 +113,6 @@ $bp-md: 768px;
       gap: 0.5rem;
 
       li {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;

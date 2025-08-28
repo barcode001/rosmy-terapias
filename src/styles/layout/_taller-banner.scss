@@ -1,0 +1,183 @@
+/* If you use your variables/functions, keep them; otherwise this is standalone */
+.taller-banner {
+  --bg1: #7b5dc9; /* lavender / spiritual */
+  --bg2: #9c27b0; /* soft blue */
+  --petal: #ffdce8; /* petal highlight */
+  --ring: #bba8ff; /* subtle ring glow */
+  --text: #fff;
+
+  color: var(--text);
+  max-width: 1100px;
+  margin: clamp(16px, 2.5vw, 28px) auto;
+  padding: clamp(20px, 3vw, 36px) 0;
+  border-radius: 22px;
+
+  /* Gentle spiritual gradient + soft glow */
+  background: radial-gradient(
+      900px 360px at 16% -10%,
+      rgba(255, 255, 255, 0.15),
+      transparent 60%
+    ),
+    radial-gradient(
+      500px 180px at 85% 90%,
+      rgba(255, 255, 255, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
+
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: clamp(16px, 3vw, 28px);
+    align-items: center;
+  }
+
+  &__copy {
+    max-width: 62ch;
+  }
+
+  &__badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: #fff;
+    color: #3c2b60;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    margin-bottom: 0.55rem;
+  }
+
+  .taller-note {
+    margin: 0 0 0.6rem;
+    opacity: 0.95;
+  }
+
+  &__title {
+    margin: 0 0 0.4rem;
+    font-size: clamp(1.6rem, 4vw, 2.35rem);
+    line-height: 1.15;
+
+    .highlight {
+      background: linear-gradient(90deg, #fff, var(--petal));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 22px rgba(255, 255, 255, 0.25);
+    }
+    .price {
+      margin-left: 0.4rem;
+      font-weight: 800;
+      color: #ffe;
+      opacity: 0.95;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 0.9rem;
+    opacity: 0.95;
+  }
+
+  &__bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem;
+    display: grid;
+    gap: 0.38rem;
+
+    li {
+      position: relative;
+      padding-left: 1.2rem;
+      &::before {
+        content: "✿";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--petal);
+        font-weight: 900;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.85rem 1.25rem;
+    align-self: center;
+    border-radius: 999px;
+    background: #fff;
+    color: #3c2b60;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+    &:hover {
+      transform: translateY(-1px);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  .btn-ghost {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.85rem 1.05rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: #fff;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    &:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: #fff;
+    }
+  }
+
+  &__art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .taller-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+      background-color: white;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+    &__art {
+      order: -1;
+      margin-bottom: 0.35rem;
+    }
+    &__title {
+      text-wrap: balance;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    width: 95%;
+  }
+  @media (max-width: 900px) {
+    width: 92%;
+  }
+  @media (max-width: 480px) {
+    width: 92%;
+  }
+}

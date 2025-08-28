@@ -1,0 +1,207 @@
+.taller-page {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  background: white;
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #5a38a5;
+    text-align: center;
+  }
+
+  .intro {
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #6c3fb2;
+  }
+
+  .bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+
+      &::before {
+        content: "✓";
+        color: #86efac;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  .cta {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.contact__form {
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2b1752; // matches your theme text color
+
+    select,
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-top: 0.35rem;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff;
+      color: #333;
+      transition: all 0.2s ease;
+
+      &:focus {
+        border-color: #7c3aed; // purple accent (adjust to your theme)
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+      }
+    }
+  }
+
+  /* Specific tweak for the dropdown */
+  select {
+    appearance: none; // hides default arrow
+    background: #fff
+      url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+      no-repeat right 0.8rem center;
+    background-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #6d28d9;
+    }
+  }
+}
+
+.taller-page {
+  h1 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    margin-bottom: 0.25rem;
+  }
+  .taller-sub,
+  .taller-time,
+  .taller-next {
+    color: #555;
+    margin: 0.25rem 0;
+  }
+  .taller-next {
+    font-style: italic;
+  }
+
+  .taller-header .cta {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .taller-section {
+    margin: 1.5rem 0;
+  }
+  .bullets {
+    padding-left: 1.1rem;
+  }
+  .bullets li {
+    margin: 0.4rem 0;
+  }
+
+  .faq {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin: 0.6rem 0;
+    background: #fff;
+  }
+  .faq > summary {
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .faq[open] {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .cta-bottom {
+    margin-top: 1rem;
+  }
+}
+
+.taller-page {
+  h1 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    margin-bottom: 0.25rem;
+  }
+  .taller-sub,
+  .taller-time,
+  .taller-next {
+    color: #555;
+    margin: 0.25rem 0;
+  }
+  .taller-next {
+    font-style: italic;
+  }
+
+  .taller-header .cta {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .taller-section {
+    margin: 1.5rem 0;
+  }
+  .bullets {
+    padding-left: 1.1rem;
+  }
+  .bullets li {
+    margin: 0.4rem 0;
+  }
+
+  .faq {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin: 0.6rem 0;
+    background: #6c3fb2;
+    color: white;
+  }
+  .faq > summary {
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .faq[open] {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .cta-bottom {
+    margin-top: 1rem;
+  }
+}

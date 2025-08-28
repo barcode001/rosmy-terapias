@@ -1,27 +1,25 @@
 body {
-  cursor: url("/src/assets/icons/fairy.png") 12 12, auto;
+  cursor: url("/src/assets/icons/fairy.png") 24 24, auto;
 }
 
 .fairy-sparkle {
   position: absolute;
   left: 0;
   top: 0;
-  /* Start at the provided coordinates */
   transform: translate3d(var(--x, -10000px), var(--y, -10000px), 0) scale(1);
-  border-radius: 999px;
+  border-radius: 50%;
   pointer-events: none;
   will-change: transform, opacity;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  filter: blur(1px) drop-shadow(0 0 6px rgba(190, 110, 212, 0.5));
+  opacity: 0;
+
   background: radial-gradient(
     circle,
-    // #ffd700 0%,
-    // #ffb6ff 60%,
-    // rgba(255, 255, 255, 0) 100%
-    #be6ed4 0%,
-    #ba0ad9 60%,
-    rgba(101, 38, 138, 0) 100%
+    rgba(255, 255, 255, 0.95) 0%,
+    /* bright white sparkle core */ rgba(190, 110, 212, 0.7) 40%,
+    /* soft purple glow */ rgba(101, 38, 138, 0) 80%
+      /* fade smoothly to nothing */
   );
-  opacity: 0;
 }
 
 .fairy-sparkle.play {

@@ -4,16 +4,19 @@ import Hero from "../components/Hero";
 import About from "./About";
 import Services from "./Services";
 import Testimonials from "./Testmonials";
-import Booking from "./Booking";
+
+import TallerPromo from "./TallerPromo";
+import TiktokBanner from "./TiktokBanner";
 
 function Home() {
   return (
     <div>
       <Hero />
       <About />
+      <TiktokBanner />
       <Services />
       <Testimonials />
-      <Booking />
+      <TallerPromo />
     </div>
   );
 }
