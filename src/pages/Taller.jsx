@@ -24,7 +24,8 @@ export default function Taller() {
         <title>Taller de Energía y Bienestar | Rosmy Terapias</title>
         <meta
           name="description"
-          content="Taller en línea por Zoom. Energía y conciencia, liberación emocional y mental, bienestar físico y espiritual. Todos los jueves de 8:00 p.m. a 10:00 p.m. (hora de Texas)."
+          content="Taller en línea por Zoom: energía, conciencia y liberación emocional. Bienestar físico y espiritual todos los jueves de 8:00 p.m. a 10:00 p.m. (hora Texas).
+."
         />
         <link rel="canonical" href="https://rosmyterapias.com/taller" />
 

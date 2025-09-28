@@ -62,7 +62,9 @@ export default function Contact() {
     <section className="contact wrapper">
       {/* ✅ SEO meta tags */}
       <Helmet>
-        <title>Contacto – Rosmy Terapias en Houston</title>
+        <title>
+          Contacto – Rosmy Terapias en Houston | Sesiones Energéticas
+        </title>
         <meta
           name="description"
           content="Ponte en contacto con Rosmy Terapias en Houston para consultas o reservas de sesiones de sanación energética y talleres mensuales."

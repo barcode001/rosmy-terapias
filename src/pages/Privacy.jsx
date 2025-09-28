@@ -10,7 +10,7 @@ export default function Privacy() {
         <title>Política de Privacidad y Aviso Legal | Rosmy Terapias</title>
         <meta
           name="description"
-          content="Lee la política de privacidad y el aviso legal de Rosmy Terapias en Houston. Conoce cómo manejamos tu información personal y los alcances de nuestros servicios de sanación energética."
+          content="Lee la política de privacidad y el aviso legal de Rosmy Terapias en Houston. Descubre cómo protegemos tu información y el alcance de nuestros servicios."
         />
         <link rel="canonical" href={pageUrl} />
 
