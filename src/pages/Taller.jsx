@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Seo from "../components/Seo";
+import { Helmet } from "react-helmet-async";
 
 export default function Taller() {
   const nextThursday = (() => {
-    // Helper: figure out next Thursday in Central Time (rough client-side)
     const now = new Date();
     const day = now.getDay(); // 0=Sun..6=Sat
-    const daysUntilThu = (4 - day + 7) % 7 || 7; // next Thursday (if today Thu, go next week)
+    const daysUntilThu = (4 - day + 7) % 7 || 7;
     const d = new Date(now);
     d.setDate(now.getDate() + daysUntilThu);
     return new Intl.DateTimeFormat("es-ES", {
@@ -20,39 +19,72 @@ export default function Taller() {
 
   return (
     <>
-      <Seo
-        title="Taller de Energía y Bienestar | Rosmy Terapias"
-        description="Taller en línea por Zoom. Energía y conciencia, liberación emocional y mental, bienestar físico y espiritual. Todos los jueves de 8:00 p.m. a 10:00 p.m. (hora de Texas)."
-      />
+      {/* ✅ SEO */}
+      <Helmet>
+        <title>Taller de Energía y Bienestar | Rosmy Terapias</title>
+        <meta
+          name="description"
+          content="Taller en línea por Zoom. Energía y conciencia, liberación emocional y mental, bienestar físico y espiritual. Todos los jueves de 8:00 p.m. a 10:00 p.m. (hora de Texas)."
+        />
+        <link rel="canonical" href="https://rosmyterapias.com/taller" />
 
-      {/* JSON-LD for richer search results (optional, but nice) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rosmyterapias.com/taller" />
+        <meta
+          property="og:title"
+          content="Taller de Energía y Bienestar | Rosmy Terapias"
+        />
+        <meta
+          property="og:description"
+          content="Conéctate al Taller de Energía y Bienestar en línea. Jueves 8-10 p.m. hora de Texas. Energía vital, liberación emocional y bienestar integral."
+        />
+        <meta
+          property="og:image"
+          content="https://rosmyterapias.com/preview.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Taller de Energía y Bienestar | Rosmy Terapias"
+        />
+        <meta
+          name="twitter:description"
+          content="Sesiones en línea por Zoom todos los jueves de 8 a 10 p.m. (hora de Texas)."
+        />
+        <meta
+          name="twitter:image"
+          content="https://rosmyterapias.com/preview.webp"
+        />
+
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json">{`
+          {
             "@context": "https://schema.org",
             "@type": "Event",
-            name: "Taller de Energía y Bienestar",
-            eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
-            eventStatus: "https://schema.org/EventScheduled",
-            organizer: { "@type": "Person", name: "Rosmy" },
-            location: {
+            "name": "Taller de Energía y Bienestar",
+            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "organizer": { "@type": "Person", "name": "Rosmy" },
+            "location": {
               "@type": "VirtualLocation",
-              url: "https://rosmyterapias.com/taller",
+              "url": "https://rosmyterapias.com/taller"
             },
-            offers: {
+            "offers": {
               "@type": "Offer",
-              url: "https://rosmyterapias.com/contact?reason=taller",
-              availability: "https://schema.org/InStock",
+              "url": "https://rosmyterapias.com/contact?reason=taller",
+              "availability": "https://schema.org/InStock"
             },
-            startDate: "2025-01-01T20:00:00-06:00",
-            endDate: "2025-01-01T22:00:00-06:00",
-            description:
-              "Taller en línea por Zoom. Energía y conciencia, liberación emocional y mental, bienestar físico y espiritual.",
-          }),
-        }}
-      />
+            "startDate": "2025-01-01T20:00:00-06:00",
+            "endDate": "2025-01-01T22:00:00-06:00",
+            "description": "Taller en línea por Zoom. Energía y conciencia, liberación emocional y mental, bienestar físico y espiritual."
+          }
+        `}</script>
+      </Helmet>
 
+      {/* ✅ Page Content */}
       <section className="taller-page wrapper" aria-labelledby="taller-heading">
         <header className="taller-header">
           <h1 id="taller-heading">Talleres de Energía y Bienestar</h1>
@@ -113,7 +145,6 @@ export default function Taller() {
 
         <section className="taller-section">
           <h2>Preguntas frecuentes</h2>
-
           <details className="faq">
             <summary>¿Cómo recibo el enlace de Zoom?</summary>
             <p>
@@ -121,7 +152,6 @@ export default function Taller() {
               antes del taller.
             </p>
           </details>
-
           <details className="faq">
             <summary>¿Necesito experiencia previa?</summary>
             <p>
@@ -129,7 +159,6 @@ export default function Taller() {
               todos los niveles.
             </p>
           </details>
-
           <details className="faq">
             <summary>¿Qué debo preparar?</summary>
             <p>

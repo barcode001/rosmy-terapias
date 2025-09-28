@@ -2,6 +2,7 @@ import React, { useRef, useState, useMemo } from "react";
 import emailjs from "emailjs-com";
 import { useNavigate, useLocation } from "react-router-dom";
 import clientInfo from "../config/clientInfo";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   const formRef = useRef(null);
@@ -59,6 +60,47 @@ export default function Contact() {
 
   return (
     <section className="contact wrapper">
+      {/* ✅ SEO meta tags */}
+      <Helmet>
+        <title>Contacto – Rosmy Terapias en Houston</title>
+        <meta
+          name="description"
+          content="Ponte en contacto con Rosmy Terapias en Houston para consultas o reservas de sesiones de sanación energética y talleres mensuales."
+        />
+        <link rel="canonical" href="https://rosmyterapias.com/contact" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rosmyterapias.com/contact" />
+        <meta
+          property="og:title"
+          content="Contacto – Rosmy Terapias en Houston"
+        />
+        <meta
+          property="og:description"
+          content="Contáctanos para reservar sesiones de terapia energética o apartar tu lugar en el taller mensual."
+        />
+        <meta
+          property="og:image"
+          content="https://rosmyterapias.com/preview.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Contacto – Rosmy Terapias en Houston"
+        />
+        <meta
+          name="twitter:description"
+          content="Consulta general, sesión individual o taller mensual. Escríbenos hoy mismo."
+        />
+        <meta
+          name="twitter:image"
+          content="https://rosmyterapias.com/preview.webp"
+        />
+      </Helmet>
+
       <h1>Contáctanos</h1>
       <p className="contact__intro">
         ¿Tienes preguntas o quieres reservar una sesión o el taller? Envíanos un
@@ -80,7 +122,6 @@ export default function Contact() {
 
         {/* Contact Form */}
         <form ref={formRef} className="contact__form" onSubmit={handleSubmit}>
-          {/* Always include these for EmailJS */}
           <input type="hidden" name="to_name" value="Rosmy" />
           <input
             type="hidden"
@@ -88,7 +129,6 @@ export default function Contact() {
             value={subjectForReason(reason)}
           />
 
-          {/* New: Motivo selector */}
           <label>
             Motivo
             <select

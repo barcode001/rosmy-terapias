@@ -1,66 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!-- ===== Core ===== -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Rosmy Terapias – Sesiones de Sanación Energética en Houston</title>
 
-    <!-- SVG favicon (modern browsers including Safari) -->
+    <!-- Fallback title (Helmet will overwrite) -->
+
+    <!-- Basic favicons -->
     <link rel="icon" type="image/svg+xml" href="/images/rosmy-logo.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
     <link rel="icon" href="/favicon.ico" />
-    <meta
-      name="description"
-      content="Rosmy Terapias en Houston: sesiones de sanación energética para recuperar paz interior, liberar bloqueos emocionales y reconectar con tu energía vital."
-    />
-    <link rel="canonical" href="https://rosmyterapias.com/" />
-    <meta name="author" content="Rosmy Terapias" />
-    <meta name="theme-color" content="#9c27b0" />
-    <meta name="robots" content="index,follow" />
-
-    <!-- ===== Open Graph / WhatsApp ===== -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rosmyterapias.com/" />
-    <meta
-      property="og:title"
-      content="Rosmy Terapias – Sanación Energética en Houston"
-    />
-    <meta
-      property="og:description"
-      content="Recupera tu paz interior con sesiones de terapia energética personalizada en Houston. Reserva fácil en línea."
-    />
-    <meta
-      property="og:image"
-      content="https://rosmyterapias.com/preview.webp"
-    />
-    <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- ===== Twitter Card ===== -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Rosmy Terapias – Sanación Energética en Houston"
-    />
-    <meta
-      name="twitter:description"
-      content="Recupera tu paz interior con sesiones de terapia energética personalizada en Houston. Reserva fácil en línea."
-    />
-    <meta
-      name="twitter:image"
-      content="https://rosmyterapias.com/preview.webp"
-    />
-
-    <!-- ===== Icons / PWA niceties ===== -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- ===== Fonts (non-blocking) ===== -->
+    <!-- Fonts (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -75,53 +30,10 @@
         rel="stylesheet"
       />
     </noscript>
-
-    <!-- ===== Google Analytics ===== -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-9LD83MQZB5"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-9LD83MQZB5");
-    </script>
   </head>
 
   <body>
     <div id="root"></div>
-
-    <!-- ===== Local Business Schema ===== -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Rosmy Terapias",
-        "image": "https://rosmyterapias.com/preview.webp",
-        "@id": "https://rosmyterapias.com",
-        "url": "https://rosmyterapias.com",
-        "telephone": "+1-832-322-5236",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Houston",
-          "addressRegion": "TX",
-          "postalCode": "77013",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "29.8130",
-          "longitude": "-95.2400"
-        },
-        "priceRange": "$$",
-        "description": "Sesiones de terapia energética personalizadas en Houston, TX 77013 para armonizar cuerpo, mente y espíritu."
-      }
-    </script>
-
-    <!-- ===== App bundle ===== -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
