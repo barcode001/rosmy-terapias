@@ -8,37 +8,17 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- About Page -->
-  <url>
-    <loc>https://rosmyterapias.com/#about</loc>
-    <lastmod>2025-08-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Services Page -->
-  <url>
-    <loc>https://rosmyterapias.com/#services</loc>
-    <lastmod>2025-08-22</lastmod>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Testimonials Section -->
-  <url>
-    <loc>https://rosmyterapias.com/#testimonials</loc>
-    <lastmod>2025-08-22</lastmod>
-    <priority>0.6</priority>
-  </url>
 
   <!-- Booking Section -->
   <url>
-    <loc>https://rosmyterapias.com/#booking</loc>
+    <loc>https://rosmyterapias.com/booking</loc>
     <lastmod>2025-08-22</lastmod>
     <priority>0.9</priority>
   </url>
 
   <!-- Contact Page -->
   <url>
-    <loc>https://rosmyterapias.com/#contact</loc>
+    <loc>https://rosmyterapias.com/contact</loc>
     <lastmod>2025-08-22</lastmod>
     <priority>0.9</priority>
   </url>
